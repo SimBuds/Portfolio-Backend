@@ -17,8 +17,6 @@ mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log(err));
 
-app.use('/api/contact', require('./routes/contactRoutes'));
-
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
